@@ -3,27 +3,27 @@
 [ext_resource path="res://Ball.png" type="Texture" id=1]
 [ext_resource path="res://Ball.gd" type="Script" id=2]
 
-[sub_resource type="PhysicsMaterial" id=3]
+[sub_resource type="PhysicsMaterial" id=1]
 friction = 0.0
 bounce = 10.0
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CircleShape2D" id=2]
 radius = 3.49914
 
-[sub_resource type="SegmentShape2D" id=2]
+[sub_resource type="SegmentShape2D" id=3]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Ball" type="RigidBody2D" parent="."]
-position = Vector2( 318.455, 148.183 )
-physics_material_override = SubResource( 3 )
+position = Vector2( 317.455, 318.183 )
+physics_material_override = SubResource( 1 )
 gravity_scale = 0.0
 linear_damp = 0.5
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
 scale = Vector2( 5.24, 5.24 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -35,20 +35,22 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Ball2" type="RigidBody2D" parent="."]
-position = Vector2( 319.869, 298.089 )
-physics_material_override = SubResource( 3 )
+[node name="Balls" type="Node" parent="."]
+
+[node name="Ball2" type="RigidBody2D" parent="Balls"]
+position = Vector2( 314.869, 163.089 )
+physics_material_override = SubResource( 1 )
 gravity_scale = 0.0
 linear_damp = 0.5
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Balls/Ball2"]
 scale = Vector2( 5.24, 5.24 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Sprite" type="Sprite" parent="Ball2"]
+[node name="Sprite" type="Sprite" parent="Balls/Ball2"]
 modulate = Color( 1, 0, 0, 1 )
 scale = Vector2( 5, 5 )
 texture = ExtResource( 1 )
@@ -56,35 +58,142 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Ball3" type="RigidBody2D" parent="Balls"]
+position = Vector2( 335.869, 129.089 )
+physics_material_override = SubResource( 1 )
+gravity_scale = 0.0
+linear_damp = 0.5
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-scale = Vector2( -30.4109, 153.829 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Balls/Ball3"]
+scale = Vector2( 5.24, 5.24 )
 shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Balls/Ball3"]
+modulate = Color( 1, 0, 0, 1 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ball4" type="RigidBody2D" parent="Balls"]
+position = Vector2( 312.869, 97.089 )
+physics_material_override = SubResource( 1 )
+gravity_scale = 0.0
+linear_damp = 0.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Balls/Ball4"]
+scale = Vector2( 5.24, 5.24 )
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Balls/Ball4"]
+modulate = Color( 1, 0, 0, 1 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ball6" type="RigidBody2D" parent="Balls"]
+position = Vector2( 272.869, 97.089 )
+physics_material_override = SubResource( 1 )
+gravity_scale = 0.0
+linear_damp = 0.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Balls/Ball6"]
+scale = Vector2( 5.24, 5.24 )
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Balls/Ball6"]
+modulate = Color( 1, 0, 0, 1 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ball7" type="RigidBody2D" parent="Balls"]
+position = Vector2( 351.869, 97.089 )
+physics_material_override = SubResource( 1 )
+gravity_scale = 0.0
+linear_damp = 0.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Balls/Ball7"]
+scale = Vector2( 5.24, 5.24 )
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Balls/Ball7"]
+modulate = Color( 1, 0, 0, 1 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ball5" type="RigidBody2D" parent="Balls"]
+position = Vector2( 294.869, 131.089 )
+physics_material_override = SubResource( 1 )
+gravity_scale = 0.0
+linear_damp = 0.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Balls/Ball5"]
+scale = Vector2( 5.24, 5.24 )
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Balls/Ball5"]
+modulate = Color( 1, 0, 0, 1 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Walls" type="Node" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Walls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D"]
+scale = Vector2( -30.4109, 153.829 )
+shape = SubResource( 3 )
 one_way_collision_margin = 0.0
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+[node name="StaticBody2D3" type="StaticBody2D" parent="Walls"]
 position = Vector2( 646.296, -25.4559 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D3"]
 scale = Vector2( -30.4109, 153.829 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 one_way_collision_margin = 0.0
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+[node name="StaticBody2D2" type="StaticBody2D" parent="Walls"]
 position = Vector2( 1204.91, -2.82843 )
 rotation = 1.5717
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D2"]
 scale = Vector2( -30.4109, 153.829 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 one_way_collision_margin = 0.0
 
-[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+[node name="StaticBody2D4" type="StaticBody2D" parent="Walls"]
 position = Vector2( 1182.28, 500.632 )
 rotation = 1.5723
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D4"]
 scale = Vector2( -30.4109, 153.829 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 one_way_collision_margin = 0.0
