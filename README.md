@@ -3,4 +3,4 @@ A guy on the Godot Facebook page asked about how to make a pool table like game 
 
 Click on the screen with your mouse to put the green ball in that direction. You can shoot the red ball. The balls will bounce on borders.
 
-![Screenshot]("https://raw.githubusercontent.com/Spearfield/Godot-Ball_Bounce_Demo/master/2020-09-19 00_50_42-PoolTest (DEBUG).png")
+![Screenshot](https://raw.githubusercontent.com/Spearfield/Godot-Ball_Bounce_Demo/master/Screenshot.png)
